@@ -1,0 +1,34 @@
+{
+  "name": "ecodrutz/transactional-stack",
+  "description": "PHP Implementation of a stack that supports transactions",
+  "type": "library",
+  "license": "MIT",
+  "keywords": [
+    "stack",
+    "transaction"
+  ],
+  "authors": [
+    {
+      "name": "Liviu Codrut Enache",
+      "email": "ecodrutz@gmail.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Stack\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Stack\\Tests\\": "tests/"
+    }
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "require": {
+    "php": "^7.2"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^8.3"
+  }
+}
