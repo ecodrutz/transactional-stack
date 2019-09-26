@@ -9,11 +9,17 @@ class Stack implements StackInterface
      */
     protected $top;
 
+    /**
+     * @param mixed $value
+     */
     public function push($value): void
     {
         $this->top = new Node($value, $this->top);
     }
 
+    /**
+     * @return mixed
+     */
     public function pop()
     {
         if (is_null($this->top)) {
@@ -25,6 +31,9 @@ class Stack implements StackInterface
         return $node->getValue();
     }
 
+    /**
+     * @return mixed
+     */
     public function peek()
     {
         if (is_null($this->top)) {

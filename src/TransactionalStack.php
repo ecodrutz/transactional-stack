@@ -14,6 +14,9 @@ class TransactionalStack extends Stack implements TransactionableInterface
         $this->snapShots[] = $this->top;
     }
 
+    /**
+     * @return bool
+     */
     public function rollback(): bool
     {
         if (count($this->snapShots) < 1) {
@@ -25,6 +28,9 @@ class TransactionalStack extends Stack implements TransactionableInterface
         return true;
     }
 
+    /**
+     * @return bool
+     */
     public function commit(): bool
     {
         if (count($this->snapShots) < 1) {
