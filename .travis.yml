@@ -2,5 +2,7 @@ language: php
 php:
   - 7.2.22
 install:
-  - if [[ $SETUP = 'stable' ]]; then travis_retry composer update --prefer-dist --no-interaction --prefer-stable --no-suggest; fi
-  - if [[ $SETUP = 'lowest' ]]; then travis_retry composer update --prefer-dist --no-interaction --prefer-lowest --prefer-stable --no-suggest; fi
+  - travis_retry composer update
+cache:
+  directories:
+    - $HOME/.composer/cache
