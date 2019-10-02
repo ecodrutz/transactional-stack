@@ -10,7 +10,7 @@ class Node
     protected $value;
 
     /**
-     * @var Node
+     * @var Node|null
      */
     protected $next;
 
@@ -34,18 +34,18 @@ class Node
     }
 
     /**
+     * @return Node|null
+     */
+    public function getNext(): ?Node
+    {
+        return $this->next;
+    }
+
+    /**
      * @return mixed
      */
     public function getValue()
     {
         return $this->value;
-    }
-
-    /**
-     * @return Node
-     */
-    public function getNext()
-    {
-        return $this->next;
     }
 }
