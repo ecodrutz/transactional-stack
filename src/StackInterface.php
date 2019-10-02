@@ -5,7 +5,7 @@ namespace Stack;
 interface StackInterface
 {
     /**
-     * Pushes an integer value on top of the stack
+     * Pushes a value on top of the stack
      *
      * @param mixed $value
      */
